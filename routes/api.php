@@ -21,3 +21,6 @@ Route::get('todos/{id}', 'TodoController@show');
 Route::post('todos', 'TodoController@store');
 Route::put('todos/{id}', 'TodoController@update');
 Route::delete('todos/{id}', 'TodoController@delete');
+
+Route::get('users', 'UserController@list');
+Route::get('users/{id}', 'UserController@id');

@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Response;
-/*
+ /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -17,13 +16,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('api')->group(function () {
-    Route::get('users', function () {
-        $users = DB::table('users')->get();
-        return response()->json($users);
-    });
-    Route::get('users/{id}', function ($id) {
-        $user = DB::table('users')->where('id','=',$id)->first();
-        return response()->json($user);
-    });
-});
